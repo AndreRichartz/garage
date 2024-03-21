@@ -4,13 +4,18 @@ from django.shortcuts import render
 
 from rest_framework.viewsets import ModelViewSet
 
-from garage.serializers import CategorySerializer
-from garage.serializers import BrandSerializer
+from garage.models import Category, Brand, Acessory
+
+from garage.serializers import CategorySerializer, BrandSerializer, AcessorySerializer
 
 class CategoryViewSet(ModelViewSet):
-    queryset = Category.object.all()
+    queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
 class BrandViewSet(ModelViewSet):
-    queryset = Brand.object.all()
+    queryset = Brand.objects.all()
     serializer_class = BrandSerializer
+
+class AcessoryViewSet(ModelViewSet):
+    queryset = Acessory.objects.all()
+    serializer_class = AcessorySerializer
