@@ -16,3 +16,13 @@ class AcessorySerializer(ModelSerializer):
     class Meta:
         model = Acessory
         fields = "__all__"
+
+class ColorSerializer(ModelSerializer):
+    class Meta:
+        model = Color
+        fields = "__all__"
+
+class VehicleSerializer(ModelSerializer):
+    class Meta:
+        model = Vehicle
+        fields = "__all__"
